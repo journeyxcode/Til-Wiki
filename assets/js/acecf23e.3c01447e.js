@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["3220"],{1912(i){i.exports=JSON.parse('{"blogBasePath":"/Til-Wiki/blog","blogTitle":"Blog","authorsListPath":"/Til-Wiki/blog/authors"}')}}]);
