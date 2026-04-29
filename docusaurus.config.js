@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AI LOG', // 사이트 제목
-  tagline: 'Today I Learned', // 서브 타이틀
+  tagline: '배움과 공유를 할 줄 아는 AI 엔지니어의 TIL — Today I Learned & Shared', // 서브 타이틀
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -38,8 +38,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',
+    locales: ['ko'],
   },
 
   presets: [
@@ -50,9 +50,8 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/journeyxcode/ailog/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -61,9 +60,9 @@ const config = {
             xslt: true,
           },
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/journeyxcode/ailog/tree/main/',
+
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -80,7 +79,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.jpg',
       colorMode: {
         defaultMode: 'dark',        // ← 기본값 다크모드
         disableSwitch: false,
@@ -98,7 +97,9 @@ const config = {
             position: 'left',
             label: 'Docs',  // ← "Docs" 로 변경
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'}, // blog 메뉴 추가
+          {to: '/about', label: 'About', position: 'left'}, // doc 메뉴 추가
+
           {
             href: 'https://github.com/journeyxcode',
             label: 'GitHub',
