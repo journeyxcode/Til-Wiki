@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://journeyxcode.github.io/ailog/blog</id>
-    <title>AI LOG Blog</title>
+    <title>AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://journeyxcode.github.io/ailog/blog"/>
-    <subtitle>AI LOG Blog</subtitle>
+    <subtitle>AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</subtitle>
     <icon>https://journeyxcode.github.io/ailog/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
