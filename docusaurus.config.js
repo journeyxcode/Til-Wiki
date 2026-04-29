@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI LOG', // 사이트 제목
+  title: 'AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL', // 사이트 제목
   tagline: '배움과 공유를 할 줄 아는 AI 엔지니어의 TIL — Today I Learned & Shared', // 서브 타이틀
   favicon: 'img/favicon.ico',
 
@@ -80,6 +80,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social-card.jpg',
+      metadata: [
+        {
+          name: 'description',
+          content: 'Android 개발자에서 AI 엔지니어로 전환 중인 InitLog의 학습 기록입니다. RAG, Agent, LangChain, LangGraph 등 AI 엔지니어링 공부 내용을 매일 기록하고 공유합니다.',
+        },
+      ],
+      
       colorMode: {
         defaultMode: 'dark',        // ← 기본값 다크모드
         disableSwitch: false,
