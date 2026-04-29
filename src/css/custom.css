@@ -1,30 +1,157 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* ── 라이트 모드 ── */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+
+  --ifm-font-family-base: 'Inter', -apple-system, sans-serif;
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.75;
+  --ifm-code-font-size: 13px;
+  --ifm-navbar-shadow: none;
+  --ifm-toc-border-color: #e5e7eb;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ── 다크 모드 ── */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  --ifm-background-color: #0f1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-navbar-background-color: #0f1117;
+  --ifm-sidebar-background-color: #0f1117;
+  --ifm-toc-border-color: #21262d;
+  --ifm-color-emphasis-300: #30363d;
+  --ifm-hr-border-color: #21262d;
+}
+
+/* ── 네비게이션바 ── */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding: 0 1.5rem;
+}
+
+[data-theme='dark'] .navbar {
+  background: #0f1117;
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+}
+
+.navbar__link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ── 사이드바 ── */
+.menu {
+  padding: 1rem 0.5rem;
+  font-size: 13px;
+}
+
+.menu__link {
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+.menu__list-item-collapsible:hover {
+  background: transparent;
+}
+
+/* ── 콘텐츠 ── */
+.markdown h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-top: 2.5rem;
+}
+
+.markdown h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ── 코드블록 ── */
+.prism-code {
+  font-size: 13px !important;
+  border-radius: 8px !important;
+}
+
+[data-theme='dark'] .prism-code {
+  background: #161b22 !important;
+}
+
+/* ── 인라인 코드 ── */
+code {
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+[data-theme='dark'] code {
+  background: #21262d;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+
+/* ── 테이블 ── */
+table {
+  font-size: 13px;
+}
+
+[data-theme='dark'] table tr {
+  border-color: #21262d;
+}
+
+[data-theme='dark'] table tr:nth-child(2n) {
+  background: #161b22;
+}
+
+/* ── 푸터 ── */
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  padding: 2rem;
+}
+
+[data-theme='dark'] .footer {
+  background: #0f1117;
+}
+
+/* ── 스크롤바 ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
 }

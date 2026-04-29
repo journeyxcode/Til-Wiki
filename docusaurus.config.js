@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Til-Wiki', // 사이트 제목
+  title: 'AI LOG', // 사이트 제목
   tagline: 'Today I Learned', // 서브 타이틀
   favicon: 'img/favicon.ico',
 
@@ -21,14 +21,16 @@ const config = {
 
   // Set the production url of your site here
   url: 'https://journeyxcode.github.io', // 배포 주소
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Til-Wiki/',
+  baseUrl: '/ailog/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+
+  organizationName: 'journeyxcode', // Usually your GitHub org/user name.
+  projectName: 'ailog', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -80,10 +82,11 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',        // ← 기본값 다크모드
+        disableSwitch: false,
       },
       navbar: {
-        title: 'My Site',
+        title: '🐱 AI LOG',      // ← Til-Wiki
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -93,11 +96,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',  // ← "Docs" 로 변경
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          //{to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/journeyxcode',
             label: 'GitHub',
             position: 'right',
           },
@@ -105,48 +108,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} AI LOG · Made by journeyxcode 🐱 🐾 `,
       },
       prism: {
         theme: prismThemes.github,
