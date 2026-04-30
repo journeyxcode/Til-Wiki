@@ -72,6 +72,10 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-T6D2Z9QD9Z',  // ← 측정 ID 입력
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
