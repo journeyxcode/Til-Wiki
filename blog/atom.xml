@@ -1,112 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://journeyxcode.github.io/ailog/blog</id>
-    <title>AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <title>배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</title>
+    <updated>2026-04-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://journeyxcode.github.io/ailog/blog"/>
-    <subtitle>AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</subtitle>
-    <icon>https://journeyxcode.github.io/ailog/img/favicon.ico</icon>
+    <subtitle>배움과 공유를 할 줄 아는 AI 엔지니어의 TIL Blog</subtitle>
+    <icon>https://journeyxcode.github.io/ailog/img/logo.png</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://journeyxcode.github.io/ailog/blog/welcome</id>
-        <link href="https://journeyxcode.github.io/ailog/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
-<p>Here are a few tips you might find useful.</p>
+        <title type="html"><![CDATA[Android 개발자, AI를 시작하다]]></title>
+        <id>https://journeyxcode.github.io/ailog/blog/2026/04/30/first-post</id>
+        <link href="https://journeyxcode.github.io/ailog/blog/2026/04/30/first-post"/>
+        <updated>2026-04-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Android 개발자로 일해온 제가, AI 엔지니어로의 전환을 준비하며 그 여정을 기록하기 위해 이 블로그를 시작합니다.]]></summary>
+        <content type="html"><![CDATA[<p>Android 개발자로 일해온 제가, AI 엔지니어로의 전환을 준비하며 그 여정을 기록하기 위해 이 블로그를 시작합니다.</p>
 <!-- -->
-<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
-<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
-<p>The blog post date can be extracted from filenames, such as:</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="왜-시작했나요">왜 시작했나요?<a href="https://journeyxcode.github.io/ailog/blog/2026/04/30/first-post#%EC%99%9C-%EC%8B%9C%EC%9E%91%ED%96%88%EB%82%98%EC%9A%94" class="hash-link" aria-label="왜 시작했나요?에 대한 직접 링크" title="왜 시작했나요?에 대한 직접 링크" translate="no">​</a></h2>
+<p>Android 개발자로 앱 개발 및 다수 프로젝트를 진행하며 일해왔습니다.</p>
+<p>작년 가을 시작한 부트캠프에서 많은 우여곡절이 있었습니다.
+이제 부트캠프가 곧 끝나갑니다. 아직 많이 부족한 데 잘할 수 있을지 걱정이 됩니다.</p>
+<p>저는 AI 엔지니어로 직무 전환을 목표로 준비하고 있습니다.
+그동안 공부했던 내용들과 최신 소식들 그리고 저와 같은 AI 분야에 도전하시는 분들에게도 도움이 되는 내용을 공유하고 싶습니다.</p>
+<p>아직도 배워야 할 것들이 많지만 몸소 부딪히며 만들어 가겠습니다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="이-블로그는-어떤-공간인가요">이 블로그는 어떤 공간인가요?<a href="https://journeyxcode.github.io/ailog/blog/2026/04/30/first-post#%EC%9D%B4-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%8A%94-%EC%96%B4%EB%96%A4-%EA%B3%B5%EA%B0%84%EC%9D%B8%EA%B0%80%EC%9A%94" class="hash-link" aria-label="이 블로그는 어떤 공간인가요?에 대한 직접 링크" title="이 블로그는 어떤 공간인가요?에 대한 직접 링크" translate="no">​</a></h2>
+<p>AI LOG는 단순한 학습 일지가 아닙니다.</p>
 <ul>
-<li class=""><code>2019-05-30-welcome.md</code></li>
-<li class=""><code>2019-05-30-welcome/index.md</code></li>
+<li class="">공부한 내용을 나만의 언어로 정리한 기술 문서</li>
+<li class="">직접 구현하고 실패하고 개선한 프로젝트 경험</li>
+<li class="">AI 엔지니어로 일할 준비를 위한 지나온 흔적들</li>
+<li class="">AI, 모바일 분야의 최신 소식과 논문 리뷰</li>
 </ul>
-<p>A blog post folder can be convenient to co-locate blog post images:</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://journeyxcode.github.io/ailog/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
-<p>The blog supports tags as well!</p>
-<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
+<p>읽는 사람에게도 도움이 되는 글을 쓰는 것을 목표로 합니다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="앞으로의-계획">앞으로의 계획<a href="https://journeyxcode.github.io/ailog/blog/2026/04/30/first-post#%EC%95%9E%EC%9C%BC%EB%A1%9C%EC%9D%98-%EA%B3%84%ED%9A%8D" class="hash-link" aria-label="앞으로의 계획에 대한 직접 링크" title="앞으로의 계획에 대한 직접 링크" translate="no">​</a></h2>
+<p>AI 기본기부터 시작해 프로젝트 경험, 최신 소식까지 꾸준히 채워나갈 예정입니다.</p>
+<p>완벽하지 않아도 괜찮습니다. 꾸준함이 가장 강한 무기라고 믿으니까요.</p>
+<blockquote>
+<p>🐱 Happy Coding!</p>
+</blockquote>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>journeyxcode</name>
+            <uri>https://github.com/journeyxcode</uri>
         </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
-        </author>
-        <category label="Facebook" term="Facebook"/>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>https://journeyxcode.github.io/ailog/blog/mdx-blog-post</id>
-        <link href="https://journeyxcode.github.io/ailog/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer" class="">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" class="">MDX</a>.</p>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
-<!-- -->
-<p>For example, use JSX to create an interactive button:</p>
-<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#F8F8F2"><span class="token operator">&lt;</span><span class="token plain">button onClick</span><span class="token operator">=</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token arrow operator">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">alert</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">'button clicked!'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token operator">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token plain">button</span><span class="token operator">&gt;</span><br></div></code></pre></div></div>
-<button>Click me!</button>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <category label="Docusaurus" term="Docusaurus"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://journeyxcode.github.io/ailog/blog/long-blog-post</id>
-        <link href="https://journeyxcode.github.io/ailog/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
-<p>Use a <code>{/*</code> <code>truncate</code> <code>*/}</code> comment to limit blog post size in the list view.</p>
-<!-- -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
-        </author>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://journeyxcode.github.io/ailog/blog/first-blog-post</id>
-        <link href="https://journeyxcode.github.io/ailog/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
-<!-- -->
-<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
-        <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
-        </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
-        </author>
-        <category label="Hola" term="Hola"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="AI" term="AI"/>
+        <category label="TIL" term="TIL"/>
+        <category label="Start" term="Start"/>
     </entry>
 </feed>

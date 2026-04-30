@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["8548"],{968(e){e.exports=JSON.parse('{"authors":[{"name":"journeyxcode","url":"https://github.com/journeyxcode","imageURL":"https://github.com/journeyxcode.png","key":"journeyxcode","page":null,"count":0}]}')}}]);

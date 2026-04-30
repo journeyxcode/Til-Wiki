@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["2349"],{7733(l){l.exports=JSON.parse('{"tags":[{"label":"AI","permalink":"/ailog/blog/tags/ai","count":1},{"label":"TIL","permalink":"/ailog/blog/tags/til","count":1},{"label":"Start","permalink":"/ailog/blog/tags/start","count":1}]}')}}]);

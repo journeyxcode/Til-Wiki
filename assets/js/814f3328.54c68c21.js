@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["1833"],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Android \uAC1C\uBC1C\uC790, AI\uB97C \uC2DC\uC791\uD558\uB2E4","permalink":"/ailog/blog/2026/04/30/first-post","unlisted":false,"date":"2026-04-30T00:00:00.000Z"}]}')}}]);
