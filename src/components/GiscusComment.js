@@ -1,9 +1,8 @@
 import Giscus from '@giscus/react';
 import { useColorMode } from '@docusaurus/theme-common';
 
-export default function GiscusComment() {
+function GiscusCommentInner() {
   const { colorMode } = useColorMode();
-
   return (
     <Giscus
       repo="journeyxcode/ailog"
@@ -20,4 +19,9 @@ export default function GiscusComment() {
       loading="lazy"
     />
   );
+}
+
+export default function GiscusComment() {
+  if (typeof window === 'undefined') return null;
+  return <GiscusCommentInner />;
 }
