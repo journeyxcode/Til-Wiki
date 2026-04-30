@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /03-backend
 ---
 # 백엔드
 AI 서비스 개발에 필요한 백엔드 기술을 정리합니다.

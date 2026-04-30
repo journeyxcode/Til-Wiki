@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /02-news-papers
 ---
 # 소식 & 논문
 AI, 모바일 분야의 최신 트렌드와 논문 리뷰를 공유합니다.

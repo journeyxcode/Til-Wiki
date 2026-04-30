@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /06-etc
 ---
 # 기타
 도서 리뷰, 강의 정리, 면접 준비 자료를 모아둔 공간입니다.

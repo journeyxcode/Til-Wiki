@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /04-tools
 ---
 # 도구
 AI 개발에 자주 쓰는 도구들의 사용법과 팁을 정리합니다.

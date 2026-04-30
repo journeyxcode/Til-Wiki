@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /01-fundamentals
 ---
 # 개요
 AI 엔지니어링의 핵심 개념과 기술을 정리한 공간입니다.

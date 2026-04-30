@@ -1,6 +1,7 @@
 ---
 title: 개요
 sidebar_position: 1
+slug: /05-projects
 ---
 # 프로젝트
 부트캠프와 개인 프로젝트를 통해 구현한 AI 서비스를 정리합니다.
