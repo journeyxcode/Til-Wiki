@@ -63,13 +63,12 @@ function HeroBanner() {
         <div className={styles.heroText}>
           <p className={styles.heroSub}>Android Developer → AI Engineer</p>
           <h1 className={styles.heroTitle}>
-            배움과 공유를<br />
-            할 줄 아는<br />
-            <span className={styles.heroAccent}>AI 엔지니어</span>
+            배운 것을 공유하며<br />
+            <span className={styles.heroAccent}>성장합니다</span>
           </h1>
           <p className={styles.heroDesc}>
-            AI 엔지니어링 기술과 실무 경험을 정리한 기술 문서 공간입니다.<br />
-            공부한 내용을 나만의 언어로 기록하고 공유합니다.
+            AI 엔지니어로의 전환을 준비하며 배운 것을 기록하고 나눕니다.<br />
+            작은 것이라도 매일 꾸준히.
           </p>
           <div className={styles.heroBtns}>
             <Link className={styles.btnPrimary} to="/ailog/docs/intro">
