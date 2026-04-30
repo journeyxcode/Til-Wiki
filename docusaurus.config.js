@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI LOG | 배움과 공유를 할 줄 아는 AI 엔지니어의 TIL', // 사이트 제목
+  title: '배움과 공유를 할 줄 아는 AI 엔지니어의 TIL', // 사이트 제목
   tagline: '배움과 공유를 할 줄 아는 AI 엔지니어의 TIL — Today I Learned & Shared', // 서브 타이틀
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -93,10 +93,10 @@ const config = {
         disableSwitch: false,
       },
       navbar: {
-        title: '🐱 AI LOG',      // ← Til-Wiki
+        title: 'AI LOG',      // ← title
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
