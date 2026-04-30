@@ -1,10 +1,9 @@
 ---
 id: intro
 title: 소개
-slug: /
 ---
 
-# Til-Wiki
+# AI Log
 
 AI 엔지니어링 기술과 실무 경험을 정리한 기술 문서 공간입니다.
 
