@@ -1,5 +1,6 @@
 ---
-title: MLOps
+title: 개요
+sidebar_position: 1
 ---
 # MLOps
 머신러닝 모델의 개발부터 배포, 운영까지의 파이프라인을 정리합니다.

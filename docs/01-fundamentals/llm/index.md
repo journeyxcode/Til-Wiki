@@ -1,5 +1,6 @@
 ---
-title: LLM
+title: 개요
+sidebar_position: 1
 ---
 # LLM (대규모 언어 모델)
 LLM의 개념, 활용, 프롬프트 엔지니어링을 정리합니다.

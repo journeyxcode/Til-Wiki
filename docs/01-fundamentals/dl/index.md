@@ -1,5 +1,6 @@
 ---
-title: 딥러닝
+title: 개요
+sidebar_position: 1
 ---
 # 딥러닝
 딥러닝 아키텍처와 학습 방법론을 정리합니다.

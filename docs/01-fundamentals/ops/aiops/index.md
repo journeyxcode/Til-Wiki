@@ -1,5 +1,6 @@
 ---
-title: AIOps
+title: 개요
+sidebar_position: 1
 ---
 # AIOps
 AI를 활용한 IT 운영 자동화와 모니터링을 정리합니다.

@@ -1,5 +1,6 @@
 ---
-title: Agent
+title: 개요
+sidebar_position: 1
 ---
 # AI Agent
 자율적으로 작업을 수행하는 AI Agent 설계와 구현을 정리합니다.

@@ -1,5 +1,6 @@
 ---
-title: Ops
+title: 개요
+sidebar_position: 1
 ---
 # Ops
 AI 서비스의 개발, 배포, 운영에 필요한 Ops 기술을 정리합니다.

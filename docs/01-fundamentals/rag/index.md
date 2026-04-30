@@ -1,5 +1,6 @@
 ---
-title: RAG
+title: 개요
+sidebar_position: 1
 ---
 # RAG (검색 증강 생성)
 Retrieval-Augmented Generation 개념과 실제 구현 방법을 정리합니다.

@@ -1,5 +1,6 @@
 ---
-title: NLP
+title: 개요
+sidebar_position: 1
 ---
 # NLP (자연어 처리)
 텍스트 데이터 처리와 언어 모델 활용을 정리합니다.

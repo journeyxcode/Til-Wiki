@@ -1,5 +1,6 @@
 ---
-title: 수학 & 통계
+title: 개요
+sidebar_position: 1
 ---
 # 수학 & 통계
 AI/ML의 이론적 기반이 되는 수학과 통계를 정리합니다.
