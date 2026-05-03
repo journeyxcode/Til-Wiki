@@ -34,8 +34,8 @@ jobs:
           GA4_CLIENT_SECRET: ${{ secrets.GA4_CLIENT_SECRET }}
         run: |
           mkdir -p scripts/secrets
-          echo "$GA4_TOKEN" > scripts/secrets/token.json
-          echo "$GA4_CLIENT_SECRET" > scripts/secrets/client_secret.json
+          python3 -c "import os,json; open('scripts/secrets/token.json','w').write(os.environ['GA4_TOKEN'])"
+          python3 -c "import os,json; open('scripts/secrets/client_secret.json','w').write(os.environ['GA4_CLIENT_SECRET'])"
 
       - name: Fetch GA4 Stats
         run: |
