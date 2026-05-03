@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 15 * * *'  # 매일 자정 KST
 
 jobs:
   deploy:
@@ -17,6 +19,28 @@ jobs:
         with:
           node-version: 20
           cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python packages
+        run: pip install google-analytics-data google-auth-oauthlib
+
+      - name: Write secrets to files
+        env:
+          GA4_TOKEN: ${{ secrets.GA4_TOKEN }}
+          GA4_CLIENT_SECRET: ${{ secrets.GA4_CLIENT_SECRET }}
+        run: |
+          mkdir -p scripts/secrets
+          echo $GA4_TOKEN > scripts/secrets/token.json
+          echo $GA4_CLIENT_SECRET > scripts/secrets/client_secret.json
+
+      - name: Fetch GA4 Stats
+        run: |
+          cd scripts
+          python fetch_ga4_stats.py
 
       - name: Install dependencies
         run: npm ci
