@@ -1,10 +1,10 @@
 import json
 import os
+import datetime
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import DateRange, Metric, RunReportRequest
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
-from google_auth_oauthlib.flow import InstalledAppFlow
 
 # token.json에서 인증 정보 로드
 with open('secrets/token.json', 'r') as f:
@@ -19,17 +19,20 @@ creds = Credentials(
     scopes=token_data['scopes']
 )
 
-# 토큰 만료 시 강제 갱신
-creds.refresh(Request())
+try:
+    creds.refresh(Request())
+except Exception as e:
+    print(f"토큰 갱신 실패: {e}")
+    raise
 
 client = BetaAnalyticsDataClient(credentials=creds)
 
 property_id = "535351340"
 
-# 오늘 방문자
-today_response = client.run_report(RunReportRequest(
+# 어제 방문자
+yesterday_response = client.run_report(RunReportRequest(
     property=f"properties/{property_id}",
-    date_ranges=[DateRange(start_date="today", end_date="today")],
+    date_ranges=[DateRange(start_date="yesterday", end_date="yesterday")],
     metrics=[Metric(name="activeUsers")]
 ))
 
@@ -40,13 +43,13 @@ total_response = client.run_report(RunReportRequest(
     metrics=[Metric(name="totalUsers")]
 ))
 
-today = int(today_response.rows[0].metric_values[0].value) if today_response.rows else 0
+yesterday = int(yesterday_response.rows[0].metric_values[0].value) if yesterday_response.rows else 0
 total = int(total_response.rows[0].metric_values[0].value) if total_response.rows else 0
 
 result = {
-    "today": today,
+    "yesterday": yesterday,
     "total": total,
-    "updated_at": __import__('datetime').date.today().isoformat()
+    "updated_at": datetime.date.today().isoformat()
 }
 
 # static 폴더에 저장

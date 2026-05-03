@@ -22,9 +22,9 @@ export default function VisitorCount() {
         padding: '0 0 12px',   // 위 padding을 4px → 0 으로
         marginTop: '-26px',    // 위로 당기기
     }}>
-      👁 오늘 방문자: <strong>{stats.today.toLocaleString()}</strong>
-      &nbsp;|&nbsp;
-      👥 총 방문자: <strong>{stats.total.toLocaleString()}</strong>
+    👁 어제 방문자: <strong>{stats.yesterday.toLocaleString()}</strong>
+    &nbsp;|&nbsp;
+    👥 총 방문자: <strong>{stats.total.toLocaleString()}</strong>
     </div>
   );
 }
