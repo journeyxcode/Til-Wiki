@@ -8,6 +8,12 @@
 이전 문서에서 GA4 설정과 토큰 발급을 완료했다면,
 이 문서에서는 GitHub Actions 자동화와 Docusaurus Footer 컴포넌트 적용 방법을 설명합니다.
 
+:::info 어제 방문자를 표시하는 이유
+GA4는 데이터 처리에 24~48시간 지연이 있습니다.
+오늘 방문자를 표시하면 하루 종일 0으로 표시되는 문제가 있어,
+**어제 방문자**를 표시하는 방식으로 구현합니다.
+:::
+
 ## 전체 흐름
 
 ```
@@ -31,6 +37,7 @@ GitHub Actions 워크플로우 설정
 ```python
 import json
 import os
+import datetime
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import DateRange, Metric, RunReportRequest
 from google.oauth2.credentials import Credentials
@@ -49,19 +56,22 @@ creds = Credentials(
     scopes=token_data['scopes']
 )
 
-# 토큰 만료 시 자동 갱신
-if creds.expired and creds.refresh_token:
+# 토큰 강제 갱신
+try:
     creds.refresh(Request())
+except Exception as e:
+    print(f"토큰 갱신 실패: {e}")
+    raise
 
 client = BetaAnalyticsDataClient(credentials=creds)
 
 # GA4 속성 ID (Google Analytics → 관리 → 속성 설정에서 확인)
 property_id = "123456789"  # 실제 속성 ID로 변경
 
-# 오늘 방문자
-today_response = client.run_report(RunReportRequest(
+# 어제 방문자
+yesterday_response = client.run_report(RunReportRequest(
     property=f"properties/{property_id}",
-    date_ranges=[DateRange(start_date="today", end_date="today")],
+    date_ranges=[DateRange(start_date="yesterday", end_date="yesterday")],
     metrics=[Metric(name="activeUsers")]
 ))
 
@@ -72,13 +82,13 @@ total_response = client.run_report(RunReportRequest(
     metrics=[Metric(name="totalUsers")]
 ))
 
-today = int(today_response.rows[0].metric_values[0].value) if today_response.rows else 0
+yesterday = int(yesterday_response.rows[0].metric_values[0].value) if yesterday_response.rows else 0
 total = int(total_response.rows[0].metric_values[0].value) if total_response.rows else 0
 
 result = {
-    "today": today,
+    "yesterday": yesterday,
     "total": total,
-    "updated_at": __import__('datetime').date.today().isoformat()
+    "updated_at": datetime.date.today().isoformat()
 }
 
 # static 폴더에 저장 (로컬/GitHub Actions 환경 자동 감지)
@@ -95,7 +105,7 @@ print(f"완료: {result}")
 ```bash
 cd scripts
 python fetch_ga4_stats.py
-# 완료: {'today': 0, 'total': 3, 'updated_at': '2026-01-01'}
+# 완료: {'yesterday': 1, 'total': 3, 'updated_at': '2026-01-01'}
 ```
 
 `static/visitor_count.json`이 생성되면 성공입니다.
@@ -131,7 +141,7 @@ export default function VisitorCount() {
       padding: '0 0 12px',
       marginTop: '-16px',
     }}>
-      👁 오늘 방문자: <strong>{stats.today.toLocaleString()}</strong>
+      👁 어제 방문자: <strong>{stats.yesterday.toLocaleString()}</strong>
       &nbsp;|&nbsp;
       👥 총 방문자: <strong>{stats.total.toLocaleString()}</strong>
     </div>
@@ -212,8 +222,8 @@ jobs:
           GA4_CLIENT_SECRET: ${{ secrets.GA4_CLIENT_SECRET }}
         run: |
           mkdir -p scripts/secrets
-          echo "$GA4_TOKEN" > scripts/secrets/token.json
-          echo "$GA4_CLIENT_SECRET" > scripts/secrets/client_secret.json
+          python3 -c "import os; open('scripts/secrets/token.json','w').write(os.environ['GA4_TOKEN'])"
+          python3 -c "import os; open('scripts/secrets/client_secret.json','w').write(os.environ['GA4_CLIENT_SECRET'])"
 
       - name: Fetch GA4 Stats
         run: |
@@ -238,11 +248,6 @@ jobs:
 `main` 브랜치에 push할 때도 함께 갱신됩니다.
 :::
 
-:::caution GA4 데이터 지연
-GA4는 데이터 처리에 24~48시간 지연이 있습니다.
-오늘 방문자 수가 실시간으로 반영되지 않는 것은 정상입니다.
-:::
-
 ---
 
 ## 5단계 — 커밋 & 배포
@@ -261,7 +266,7 @@ git push origin main
 
 ```
 Copyright © 2026 AI LOG · Made by yourname
-👁 오늘 방문자: 0 | 👥 총 방문자: 3
+👁 어제 방문자: 1 | 👥 총 방문자: 3
 ```
 
 ---
@@ -271,6 +276,6 @@ Copyright © 2026 AI LOG · Made by yourname
 | 문제 | 원인 | 해결 |
 |---|---|---|
 | Footer에 숫자가 안 보임 | `visitor_count.json` 경로 오류 | `baseUrl` 확인 후 `useBaseUrl` 사용 |
-| JSON 파싱 오류 | secrets 파일 쓰기 오류 | `echo "$GA4_TOKEN"` 따옴표 확인 |
-| 오늘 방문자가 항상 0 | GA4 데이터 지연 | 정상 (24~48시간 지연) |
-| 토큰 만료 오류 | refresh_token 미설정 | `get_token.py` 재실행 |
+| JSON 파싱 오류 | secrets 파일 쓰기 오류 | Python으로 파일 쓰기 방식 사용 |
+| 어제 방문자가 항상 0 | GA4 데이터 지연 | 정상 (24~48시간 지연) |
+| 토큰 만료 오류 | refresh_token 미설정 | `get_token.py` 재실행 후 Secrets 재등록 |
