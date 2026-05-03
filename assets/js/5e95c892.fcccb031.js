@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["1668"],{6569(e,r,s){s.r(r),s.d(r,{default:()=>n});var i=s(4848);s(6540);var a=s(4164),t=s(4308),u=s(8287),c=s(2831),l=s(6174);function n(e){return(0,i.jsx)(t.e3,{className:(0,a.A)(u.G.wrapper.docsPages),children:(0,i.jsx)(l.A,{children:(0,c.v)(e.route.routes)})})}}}]);
