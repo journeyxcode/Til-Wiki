@@ -4,6 +4,7 @@ from google.analytics.data_v1beta import BetaAnalyticsDataClient
 from google.analytics.data_v1beta.types import DateRange, Metric, RunReportRequest
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
+from google_auth_oauthlib.flow import InstalledAppFlow
 
 # token.json에서 인증 정보 로드
 with open('secrets/token.json', 'r') as f:
@@ -18,9 +19,8 @@ creds = Credentials(
     scopes=token_data['scopes']
 )
 
-# 토큰 만료 시 자동 갱신
-if creds.expired and creds.refresh_token:
-    creds.refresh(Request())
+# 토큰 만료 시 강제 갱신
+creds.refresh(Request())
 
 client = BetaAnalyticsDataClient(credentials=creds)
 
@@ -49,7 +49,7 @@ result = {
     "updated_at": __import__('datetime').date.today().isoformat()
 }
 
-# static 폴더에 저장 (로컬: ../static, GitHub Actions: static)
+# static 폴더에 저장
 static_dir = '../static' if os.path.exists('../static') else 'static'
 os.makedirs(static_dir, exist_ok=True)
 with open(f'{static_dir}/visitor_count.json', 'w') as f:
