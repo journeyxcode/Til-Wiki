@@ -34,8 +34,8 @@ jobs:
           GA4_CLIENT_SECRET: ${{ secrets.GA4_CLIENT_SECRET }}
         run: |
           mkdir -p scripts/secrets
-          echo $GA4_TOKEN > scripts/secrets/token.json
-          echo $GA4_CLIENT_SECRET > scripts/secrets/client_secret.json
+          echo "$GA4_TOKEN" > scripts/secrets/token.json
+          echo "$GA4_CLIENT_SECRET" > scripts/secrets/client_secret.json
 
       - name: Fetch GA4 Stats
         run: |
