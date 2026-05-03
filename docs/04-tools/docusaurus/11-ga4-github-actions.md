@@ -1,6 +1,7 @@
 # GA4 방문자 카운터 자동화 및 Footer 적용
 
-:::note 작성 배경
+:::note 
+작성 배경
 10번 문서의 삽질에 이어, 자동화까지 완성하는 데 또 한 번의 시행착오가 있었습니다.
 누군가에게는 이 문서가 지름길이 되길 바랍니다. 🐱
 :::
@@ -8,7 +9,8 @@
 이전 문서에서 GA4 설정과 토큰 발급을 완료했다면,
 이 문서에서는 GitHub Actions 자동화와 Docusaurus Footer 컴포넌트 적용 방법을 설명합니다.
 
-:::info 어제 방문자를 표시하는 이유
+:::info 
+어제 방문자를 표시하는 이유
 GA4는 데이터 처리에 24~48시간 지연이 있습니다.
 오늘 방문자를 표시하면 하루 종일 0으로 표시되는 문제가 있어,
 **어제 방문자**를 표시하는 방식으로 구현합니다.
@@ -149,7 +151,8 @@ export default function VisitorCount() {
 }
 ```
 
-:::info useBaseUrl 사용 이유
+:::info 
+useBaseUrl 사용 이유
 `useBaseUrl`을 사용하면 `docusaurus.config.js`의 `baseUrl` 값을 자동으로 읽어옵니다.
 `baseUrl`이 변경되어도 컴포넌트 코드를 수정할 필요가 없습니다.
 :::
@@ -243,7 +246,8 @@ jobs:
           publish_dir: ./build
 ```
 
-:::info 자동 갱신
+:::info 
+자동 갱신
 `schedule` 설정으로 매일 자정(KST)에 자동으로 GA4 데이터를 갱신합니다.
 `main` 브랜치에 push할 때도 함께 갱신됩니다.
 :::

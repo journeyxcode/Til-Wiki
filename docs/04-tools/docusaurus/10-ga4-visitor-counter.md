@@ -1,6 +1,7 @@
 # GA4 방문자 카운터 설정하기
 
-:::작성 배경
+:::info
+작성 배경
 GA4 서비스 계정 UI 버그와 며칠간의 삽질 끝에 완성한 설정 가이드입니다.
 같은 고생을 반복하지 않도록 기록해 둡니다. 😅
 :::
@@ -32,7 +33,7 @@ GitHub Secrets 등록
 - Docusaurus 프로젝트
 - Python 3.x 설치
 
-:::caution 주의
+:::caution
 Google Analytics와 Google Cloud Console은 **반드시 동일한 Google 계정**으로 로그인해야 합니다.
 :::
 
