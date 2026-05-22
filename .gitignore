@@ -21,3 +21,6 @@ yarn-error.log*
 
 # GA4 서비스 계정 키 (절대 커밋 금지!)
 scripts/secrets/
+
+# token, API 키 등 민감한 정보가 담긴 파일
+scripts/token.json
