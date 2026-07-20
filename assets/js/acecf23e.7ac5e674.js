@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktil_wiki=self.webpackChunktil_wiki||[]).push([["3220"],{1912(l){l.exports=JSON.parse('{"blogBasePath":"/ailog/blog","blogTitle":"Blog","authorsListPath":"/ailog/blog/authors"}')}}]);
