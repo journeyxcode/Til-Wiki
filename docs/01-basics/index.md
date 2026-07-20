@@ -1,10 +1,11 @@
 ---
-title: 개요
+title: Getting Started
 sidebar_position: 1
-slug: /01-fundamentals
+slug: /01-basics
 ---
 # 개요
-AI 엔지니어링의 핵심 개념과 기술을 정리한 공간입니다.
+AI 엔지니어 직무전환을 위해 기본적으로 배워야 하는 내용들을 정리한 공간입니다.
+
 ## 구성
 | 섹션 | 내용 |
 |------|------|

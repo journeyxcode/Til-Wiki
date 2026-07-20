@@ -1,7 +1,7 @@
 ---
-title: 개요
+title: Getting Started
 sidebar_position: 1
-slug: /04-tools
+slug: /04-ai-tools
 ---
 # 도구
 AI 개발에 자주 쓰는 도구들의 사용법과 팁을 정리합니다.

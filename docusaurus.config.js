@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -50,6 +50,12 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          exclude: ['**/01-basics/agent/**', '**/01-basics/dl/**', '**/01-basics/llm/**', '**/01-basics/math-stats/**',
+            '**/01-basics/ml/**', '**/01-basics/nlp/**', '**/01-basics/ops/**', '**/01-basics/rag/**',
+            '**/02-news-papers/ai/**', '**/02-news-papers/mobile/**', '**/02-news-papers/papers/**',
+            '**/03-backend/api-design/**', '**/03-backend/database/**', '**/03-backend/fastapi/**',
+            '**/04-ai-tools/ai-tool/**', '**/04-ai-tools/dev-env/**', '**/04-ai-tools/docusaurus/**',
+            '**/05-projects/**', '**/06-etc/**'],
           // Please change this to your repo.
           editUrl:
             'https://github.com/journeyxcode/ailog/tree/main/',
@@ -91,7 +97,7 @@ const config = {
           content: 'Android 개발자에서 AI 엔지니어로 전환 중인 InitLog의 학습 기록입니다. RAG, Agent, LangChain, LangGraph 등 AI 엔지니어링 공부 내용을 매일 기록하고 공유합니다.',
         },
       ],
-      
+
       colorMode: {
         defaultMode: 'dark',        // ← 기본값 다크모드
         disableSwitch: false,
@@ -109,8 +115,8 @@ const config = {
             position: 'left',
             label: 'Docs',  // ← "Docs" 로 변경
           },
-          {to: '/blog', label: 'Blog', position: 'left'}, // blog 메뉴 추가
-          {to: '/about', label: 'About', position: 'left'}, // doc 메뉴 추가
+          { to: '/blog', label: 'Blog', position: 'left' }, // blog 메뉴 추가
+          { to: '/about', label: 'About', position: 'left' }, // doc 메뉴 추가
 
           {
             href: 'https://github.com/journeyxcode',

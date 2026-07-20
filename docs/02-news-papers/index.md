@@ -1,5 +1,5 @@
 ---
-title: 개요
+title: Getting Started
 sidebar_position: 1
 slug: /02-news-papers
 ---
